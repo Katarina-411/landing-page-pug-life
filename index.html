@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pug Life</title>
+    <style>
+      body {
+        background: linear-gradient(10deg, #076470 0%, #d8d1d1 100%);
+        font-family: "Courier New", Courier, monospace;
+      }
+      .pug-life {
+        display: block;
+        width: 60%;
+        margin: 30px auto;
+        padding: 40px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px #666666;
+      }
+      h1 {
+        color: #076470;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 48px;
+        text-align: center;
+      }
+      h2 {
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 32px;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 600px;
+        border-radius: 20px;
+      }
+      p {
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        margin: 30px auto;
+      }
+      p span {
+        display: block;
+      }
+      .breeders {
+        color: #076470;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+        margin: -30px 25px 0;
+      }
+      li:hover {
+        text-decoration-line: overline;
+        font-weight: bold;
+        transform: scale(120%);
+      }
+      .costumes {
+        color: #076470;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        font-size: 18px;
+        color: #ffffff;
+        background: #076470;
+        padding: 16px 24px;
+        border: 1px solid #076470;
+        border-radius: 30px;
+        box-shadow: 2px 2px 5px #666666;
+        transition: all 200ms ease;
+        cursor: url(http://www.zingerbug.com/cursors/cursors/paws1.gif),
+          progress !important;
+      }
+      button:hover {
+        background: #ffffff;
+        color: #076470;
+        border: 1px solid #076470;
+      }
+      h4 {
+        color: #d8d1d1;
+        font: monospace;
+        font-size: 13px;
+        font-weight: normal;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pug-life">
+      <h1>Pug Life</h1>
+      <h2>
+        I didn't choose the pug life,<br />
+        <span><em>the pug life chose me!</em></span>
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/213/original/Pug-main.jpg?1661157404"
+        alt="Pug running on a beach"
+        width="80%"
+      />
+      <p>
+        <span>
+          The Pug is often described as a lot of dog in a small space. These
+          sturdy, compact dogs are known as the clowns of the canine world
+          because they have a great sense of humor and like to show off.
+        </span>
+        <br />
+        <span>
+          Originally bred to be lap dogs, Pugs thrive on human companionship.
+          They're highly sensitive, and though they can make for great pets,
+          they will not appreciate being left home alone for long hours of the
+          day.
+        </span>
+        <br />
+        <span>
+          Although these pups have a stubborn side, especially when it comes to
+          house training, they're playful, affectionate dogs who will get along
+          well even with novice pet parents. If you're looking for a loving,
+          easygoing pal, this may be the breed for you!
+        </span>
+        <br />
+        <a
+          href="https://www.dogzonline.com.au/breeds/breeders/pug.asp?state=sa"
+          target="_blank"
+          class="breeders"
+          ><strong>Pug Breeders in South Australia</strong>
+        </a>
+      </p>
+      <hr />
+      <p>
+        <span>
+          Halloween is just around the corner and to celebrate, we are giving
+          away three dog costumes.</span
+        >
+        <br />
+        <span
+          ><strong>Enter the draw to win your favourite costume.</strong></span
+        >
+      </p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/214/original/Pug_costumes.png?1661157617"
+        alt="Win a dog costume"
+        width="100%"
+      />
+      <ul class="costumes">
+        <li>
+          <p>Game of Pugs</p>
+        </li>
+        <li>
+          <p>Superpug</p>
+        </li>
+        <li>
+          <p>Pugasaurus</p>
+        </li>
+      </ul>
+      <button>Enter to win</button>
+    </div>
+    <h4>Coded by Katarina Farkas - using HTML, CSS & JavaScript.</h4>
+    <script>
+      function enterToWin() {
+        let name = prompt("What is your first name?");
+        let dogName = prompt("What is your pug's name?");
+        let costumeSelection = prompt("Which costume is your favourite?");
+        let email = prompt("What is your email address?");
+        costumeSelection = costumeSelection.toLowerCase();
+        costumeSelection = costumeSelection.trim();
+        costumeSelection = costumeSelection.replace("pugasarus", "pugasaurus");
+        if (costumeSelection === "game of pugs") {
+          alert(
+            "Thank you " +
+              name +
+              " and " +
+              dogName +
+              " for entering our draw for the Game of Pugs costume. We will contact you on " +
+              email +
+              " if you are the lucky winner! ⚔"
+          );
+        } else {
+          if (costumeSelection === "superpug") {
+            alert(
+              "Thank you " +
+                name +
+                " and " +
+                dogName +
+                " for entering our draw for the Superpug costume. We will contact you on " +
+                email +
+                " if you are the lucky winner! 🦸‍♂️"
+            );
+          } else {
+            alert(
+              "Thank you " +
+                name +
+                " and " +
+                dogName +
+                " for entering our draw for the Pugasaurus costume. We will contact you on " +
+                email +
+                " if you are the lucky winner! 🐱‍🐉"
+            );
+          }
+        }
+      }
+      let enterButton = document.querySelector("button");
+
+      enterButton.addEventListener("click", enterToWin);
+    </script>
+  </body>
+</html>
